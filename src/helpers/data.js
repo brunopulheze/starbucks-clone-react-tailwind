@@ -1,8 +1,9 @@
 // hero images
-import HeroImg1 from '../assets/1.webp';
-import HeroImg2 from '../assets/2.webp';
-import HeroImg3 from '../assets/3.jpg';
-import HeroImg4 from '../assets/4.jpg';
+import HeroImg1 from '../assets/hero01.jpg';
+import HeroImg2 from '../assets/hero02.jpg';
+import HeroImg3 from '../assets/hero03.jpg';
+import HeroImg4 from '../assets/hero04.jpg';
+import HeroImg5 from '../assets/hero05.webp';
 
 // hero
 export const hero = [
@@ -10,12 +11,19 @@ export const hero = [
         hero: [
             {
                 img: HeroImg1,
-                title: 'Sign up for Starbucks® Rewards',
-                p: 'Starting 4/22, get 25 Stars when you bring your clean, reusable cup into the café.Stars can quickly add up to Rewards.* ',
-                text: 'text-black',
-                btn: 'Join now',
+                bgSize: 'lg:bg-contain',
+                bgColor: 'bg-darkGreen',
+                title: 'Summer is brighter with free treats.*',
+                titleTextSize: 'text-[24px]',
+                p: '',
+                marginBottom: 'mb-8',
+                text: 'text-white',
+                btn: 'Join Starbucks® Rewards',
+                borderColor: 'border-white',
+                hover: 'hover:bg-white/[.06]',
                 flexDirection: 'lg:flex-row',
-                marginTop: 'mt-0'
+                marginTop: 'mt-0',
+                padding: 'sm:p-10'
             }
         ]
     },
@@ -23,12 +31,19 @@ export const hero = [
         hero: [
             {
                 img: HeroImg2,
-                title: 'Planet-positive tips',
-                p: 'April is earth month, but our commitment to reducing our environmental impact is year round.Try these tips on your next Starbucks visit.',
-                text: 'text-white',
-                btn: 'Learn how',
+                bgSize: 'lg:bg-cover',
+                bgColor: 'bg-lightPink',
+                title: 'Summer’s brightest new drinks',
+                titleTextSize: 'text-[50px]',
+                p: 'Introducing the Pineapple Passionfruit Starbucks Refreshers® beverage and the Starbucks® Paradise Drink with creamy coconutmilk.',
+                marginBottom: 'mb-8',
+                text: 'text-darkGreen',
+                btn: 'Learn more',
+                hover: 'hover:bg-black/[.06]',
+                borderColor: 'border-darkGreen',
                 flexDirection: 'lg:flex-row-reverse',
-                marginTop: 'mt-8'
+                marginTop: 'mt-0',
+                padding: 'sm:p-24'
             }
         ]
     },
@@ -36,12 +51,19 @@ export const hero = [
         hero: [
             {
                 img: HeroImg3,
-                title: 'Iced shaken awakening',
-                p: 'Introducing our new Iced Toasted Vanilla Oatmilk Shaken Espresso with rich, creamy layers and nondairy goodness.',
-                text: 'text-white',
+                bgSize: 'lg:bg-cover',
+                bgColor: 'bg-lightGreen',
+                title: 'Anytime protein',
+                titleTextSize: 'text-[50px]',
+                p: 'The Impossible™ Breakfast Sandwich** will keep you going with a plant-based sausage patty, cage-free fried egg and Cheddar on a sesame ciabatta bun.',
+                marginBottom: 'mb-8',
+                text: 'text-darkGreen',
                 btn: 'Order now',
+                hover: 'hover:bg-black/[.06]',
+                borderColor: 'border-darkGreen',
                 flexDirection: 'lg:flex-row',
-                marginTop: 'mt-8'
+                marginTop: 'mt-8',
+                padding: 'sm:p-24'
             }
         ]
     },
@@ -49,12 +71,39 @@ export const hero = [
         hero: [
             {
                 img: HeroImg4,
-                title: 'Taste of tomorrow',
-                p: 'The trailblazing Starbucks Odyssey Blend™ boldly envisions a more sustainable future for the coffee industry.',
+                bgSize: 'lg:bg-cover',
+                bgColor: 'bg-darkGreen',
+                title: 'Vacation vibes',
+                titleTextSize: 'text-[50px]',
+                p: 'With zesty lime frosting and sweet, dried coconut, our new Lime-Frosted Coconut Bar tastes like summertime.',
+                marginBottom: 'mb-8',
                 text: 'text-white',
-                btn: 'Learn now',
+                btn: 'Order now',
+                hover: 'hover:bg-white/[.06]',
+                borderColor: 'border-white',
                 flexDirection: 'lg:flex-row-reverse',
-                marginTop: 'mt-8'
+                marginTop: 'mt-8',
+                padding: 'sm:p-24'
+            }
+        ]
+    },
+    {
+        hero: [
+            {
+                img: HeroImg5,
+                bgSize: 'lg:bg-cover',
+                bgColor: 'bg-starGreen',
+                title: 'Celebrating Disability Pride Month',
+                titleTextSize: 'text-[50px]',
+                p: 'Alongside the Disability Advocacy Partner Network, we’re building more inclusive communities through awareness, action and allyship.',
+                marginBottom: 'mb-8',
+                text: 'text-black',
+                btn: 'Get involved',
+                hover: 'hover:bg-black/[.06]',
+                borderColor: 'border-black',
+                flexDirection: 'lg:flex-row',
+                marginTop: 'mt-8',
+                padding: 'sm:p-24'
             }
         ]
     },

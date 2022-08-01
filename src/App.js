@@ -9,19 +9,19 @@ import {
 function App() {
   return (
     <div classNameName="App">
-      <div style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px" }}>
-        <div className="xl:mx-40">
+      <div className='flex items-center h-24' style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px" }}>
+        <div className="w-full xl:mx-10">
           <Navbar />
         </div>
       </div>
       <div></div>
-      <div className="xl:mx-40">
+      <div className="xl:mx-10 mb-10">
         {hero.map((item, i) => (
           <Hero key={i} data={item.hero} />
         ))}
       </div>
       <div className="border my-6"></div>
-      <div className="xl:mx-40">
+      <div className="xl:mx-10">
         <Footer />
       </div>
     </div >

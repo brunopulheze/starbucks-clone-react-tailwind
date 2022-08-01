@@ -1,14 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import Button from './Button';
 
 const Navbar = () => {
+    const Links = [
+        { name: "HOME", link: "/" },
+        { name: "SERVICE", link: "/" },
+        { name: "ABOUT", link: "/" },
+        { name: "BLOG'S", link: "/" },
+        { name: "CONTACT", link: "/" },
+    ];
+    const [open, setOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+    const updateMedia = () => {
+        if (isMobile < 640) {
+            setIsMobile(window.innerWidth < 640);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+    });
+
     return (
-        <nav className="flex justify-between items-center py-2 px-2">
+        <nav className="w-full flex justify-between items-center py-2 px-4 lg:px-2">
             <div>
-                <ul className="flex flex-row font-bold items-center text-sm">
+                <ul className="flex flex-row gap-8 font-black items-center text-sm tracking-widest">
                     <svg
                         className="block"
                         xmlns="http://www.w3.org/2000/svg"
-                        width="10%"
+                        width={isMobile ? '16%' : '8%'}
                         height="100%"
                         viewBox="0 0 62 62"
                         focusable="false"
@@ -24,26 +45,31 @@ const Navbar = () => {
                             ></path>
                         </g>
                     </svg>
-                    <li className="px-2">MENU</li>
-                    <li className="px-2">REWARDS</li>
-                    <li className="px-2">GIFT CARDS</li>
+                    <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
+                        <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
+                    </div>
+                    <div className='hidden md:flex justify-between w-fit flex-row'>
+                        <li className="px-2 hover:text-accentGreen">MENU</li>
+                        <li className="px-2 hover:text-accentGreen">REWARDS</li>
+                        <li className="px-2 hover:text-accentGreen">GIFT CARDS</li>
+                    </div>
                 </ul>
             </div>
             <div className="hidden lg:inline">
-                <ul className="flex flex-row font-bold text-sm items-center">
-                    <li className="px-2">
-                        <i className="fa-solid fa-location-dot"></i> Find a store
+                <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ' : 'top-[-490px]'}`}>
+                    <li className="pr-8 hover:text-accentGreen">
+                        <i className="fa-solid fa-location-dot pr-2"></i> Find a store
                     </li>
                     <li className="px-2">
                         <button
-                            className="border-solid border-black border-2 rounded-full px-5 py-1 text-center font-bold"
+                            className="border-solid border-black border-2 rounded-full px-5 py-1 text-center font-bold hover:bg-black/[.06]"
                         >
                             Sign in
                         </button>
                     </li>
                     <li className="px-2">
                         <button
-                            className="border-solid border-black border-2 rounded-full px-5 py-1 text-center font-bold text-white bg-black"
+                            className="border-solid border-black border-2 rounded-full px-5 py-1 text-center font-bold text-white bg-black hover:bg-black/[.5]"
                         >
                             Join now
                         </button>
