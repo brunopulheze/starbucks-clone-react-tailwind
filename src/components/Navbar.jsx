@@ -29,7 +29,7 @@ const Navbar = (props) => {
                     <svg
                         className="block"
                         xmlns="http://www.w3.org/2000/svg"
-                        width={isMobile ? '16%' : '8%'}
+                        width={isMobile ? '12%' : '8%'}
                         height="100%"
                         viewBox="0 0 62 62"
                         focusable="false"
@@ -48,7 +48,7 @@ const Navbar = (props) => {
                     <div onClick={() => setOpen(!open)} className='text-3xl cursor-pointer sm:hidden'>
                         <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                     </div>
-                    <div className={`flex flex-col gap-16 pt-16 sm:py-2 px-8 md:justify-between sm:flex-row w-80 sm:w-auto h-screen sm:h-fit absolute top-20 sm:static bg-white sm:z-auto z-[5] transition-all duration-500 ease-in ${open ? '-right-4' : '-right-[100%]'}`}>
+                    <div className={`w-80 sm:w-auto h-screen sm:h-fit flex flex-col sm:flex-row gap-10 pt-16 sm:py-2 px-8 md:justify-between absolute top-20 sm:static bg-white z-[5] sm:z-auto transition-all duration-500 ease-in ${open ? '-right-4' : '-right-[100%]'}`}>
                         <li onClick={() => setOpen(!open)} className="px-2 hover:text-accentGreen">MENU</li>
                         <li className="px-2 hover:text-accentGreen">REWARDS</li>
                         <li onClick={() => setOpen(!open)} className="px-2 hover:text-accentGreen">GIFT CARDS</li>
@@ -76,7 +76,7 @@ const Navbar = (props) => {
                         </li>
                     </div>
                 </ul>
-            </div>
+            </div >
             <div className="hidden lg:inline w-full">
                 <ul className="flex flex-row flex-wrap justify-end font-bold text-sm items-center">
                     <li className="pr-8 hover:text-accentGreen">
@@ -98,7 +98,7 @@ const Navbar = (props) => {
                     </li>
                 </ul>
             </div>
-        </nav>
+        </nav >
     )
 }
 
