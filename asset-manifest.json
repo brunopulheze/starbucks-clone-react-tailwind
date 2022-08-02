@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/starbucks-clone-react-tailwind/static/css/main.3dedca2b.css",
-    "main.js": "/starbucks-clone-react-tailwind/static/js/main.a85ffc61.js",
+    "main.js": "/starbucks-clone-react-tailwind/static/js/main.bc06d9e6.js",
     "static/js/787.9fa125f9.chunk.js": "/starbucks-clone-react-tailwind/static/js/787.9fa125f9.chunk.js",
     "static/media/hero04.jpg": "/starbucks-clone-react-tailwind/static/media/hero04.648c144824efdd9921a5.jpg",
     "static/media/hero03.jpg": "/starbucks-clone-react-tailwind/static/media/hero03.e45b16658d08d85abc19.jpg",
@@ -10,11 +10,11 @@
     "static/media/hero02.jpg": "/starbucks-clone-react-tailwind/static/media/hero02.af94e92de811f381cb54.jpg",
     "index.html": "/starbucks-clone-react-tailwind/index.html",
     "main.3dedca2b.css.map": "/starbucks-clone-react-tailwind/static/css/main.3dedca2b.css.map",
-    "main.a85ffc61.js.map": "/starbucks-clone-react-tailwind/static/js/main.a85ffc61.js.map",
+    "main.bc06d9e6.js.map": "/starbucks-clone-react-tailwind/static/js/main.bc06d9e6.js.map",
     "787.9fa125f9.chunk.js.map": "/starbucks-clone-react-tailwind/static/js/787.9fa125f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3dedca2b.css",
-    "static/js/main.a85ffc61.js"
+    "static/js/main.bc06d9e6.js"
   ]
 }
