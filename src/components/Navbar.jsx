@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Button from './Button';
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const { open, setOpen } = props;
     const Links = [
         { name: "HOME", link: "/" },
         { name: "SERVICE", link: "/" },
@@ -9,11 +10,10 @@ const Navbar = () => {
         { name: "BLOG'S", link: "/" },
         { name: "CONTACT", link: "/" },
     ];
-    const [open, setOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
     const updateMedia = () => {
-        if (isMobile < 640) {
-            setIsMobile(window.innerWidth < 640);
+        if (isMobile < 480) {
+            setIsMobile(window.innerWidth < 480);
         }
     };
 
@@ -23,9 +23,9 @@ const Navbar = () => {
     });
 
     return (
-        <nav className="w-full flex justify-between items-center py-2 px-4 lg:px-2">
-            <div>
-                <ul className="flex flex-row gap-8 font-black items-center text-sm tracking-widest">
+        <nav className="w-full flex justify-between sm:justify-center items-center py-2 px-4 lg:px-2">
+            <div className='w-full'>
+                <ul className="w-full sm:w-fit flex flex-row justify-between sm:justify-start font-black items-center text-sm tracking-widest relative">
                     <svg
                         className="block"
                         xmlns="http://www.w3.org/2000/svg"
@@ -45,18 +45,38 @@ const Navbar = () => {
                             ></path>
                         </g>
                     </svg>
-                    <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
+                    <div onClick={() => setOpen(!open)} className='text-3xl cursor-pointer sm:hidden'>
                         <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                     </div>
-                    <div className='hidden md:flex justify-between w-fit flex-row'>
+                    <div className={`flex flex-col gap-16 pt-16 sm:py-2 px-8 md:justify-between sm:flex-row w-80 sm:w-auto h-screen sm:h-fit absolute top-20 sm:static bg-white sm:z-auto z-[5] transition-all duration-500 ease-in ${open ? '-right-4' : '-right-[100%]'}`}>
                         <li className="px-2 hover:text-accentGreen">MENU</li>
                         <li className="px-2 hover:text-accentGreen">REWARDS</li>
                         <li className="px-2 hover:text-accentGreen">GIFT CARDS</li>
+                        <div className="sm:hidden border my-2"></div>
+                        <div className='flex justify-start flex-wrap gap-2 sm:hidden'>
+                            <li className="px-2">
+                                <button
+                                    className="border-solid border-black border-2 rounded-full px-5 py-1 text-center font-bold hover:bg-black/[.06]"
+                                >
+                                    Sign in
+                                </button>
+                            </li>
+                            <li className="px-2">
+                                <button
+                                    className="border-solid border-black border-2 rounded-full px-5 py-1 text-center font-bold text-white bg-black hover:bg-black/[.5]"
+                                >
+                                    Join now
+                                </button>
+                            </li>
+                        </div>
+                        <li className="sm:hidden pr-8 hover:text-accentGreen">
+                            <i className="fa-solid fa-location-dot pr-2"></i> Find a store
+                        </li>
                     </div>
                 </ul>
             </div>
-            <div className="hidden lg:inline">
-                <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ' : 'top-[-490px]'}`}>
+            <div className="hidden lg:inline w-full">
+                <ul className="flex flex-row flex-wrap justify-end font-bold text-sm items-center">
                     <li className="pr-8 hover:text-accentGreen">
                         <i className="fa-solid fa-location-dot pr-2"></i> Find a store
                     </li>
