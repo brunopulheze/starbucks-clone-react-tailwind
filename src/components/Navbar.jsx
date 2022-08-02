@@ -1,26 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import React from 'react';
 
 const Navbar = (props) => {
-    const { open, setOpen } = props;
-    const Links = [
-        { name: "HOME", link: "/" },
-        { name: "SERVICE", link: "/" },
-        { name: "ABOUT", link: "/" },
-        { name: "BLOG'S", link: "/" },
-        { name: "CONTACT", link: "/" },
-    ];
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
-    const updateMedia = () => {
-        if (isMobile < 480) {
-            setIsMobile(window.innerWidth < 480);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("resize", updateMedia);
-        return () => window.removeEventListener("resize", updateMedia);
-    });
+    const { open, setOpen, isMobile } = props;
 
     return (
         <nav className="w-full flex justify-between sm:justify-center items-center py-2 px-4 lg:px-2">
@@ -98,7 +79,7 @@ const Navbar = (props) => {
                     </li>
                 </ul>
             </div>
-        </nav >
+        </nav>
     )
 }
 
