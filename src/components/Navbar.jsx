@@ -4,7 +4,7 @@ const Navbar = (props) => {
     const { open, setOpen, isMobile } = props;
 
     return (
-        <nav className="w-full flex justify-between sm:justify-center items-center py-2 px-4 lg:px-2">
+        <nav className="w-full flex justify-between sm:justify-center items-center py-4 px-4 lg:px-2">
             <div className='w-full'>
                 <ul className="w-full sm:w-fit flex flex-row justify-between sm:justify-start font-black items-center text-sm tracking-widest relative">
                     <svg
