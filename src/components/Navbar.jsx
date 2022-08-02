@@ -29,7 +29,7 @@ const Navbar = (props) => {
                     <div onClick={() => setOpen(!open)} className='text-3xl cursor-pointer sm:hidden'>
                         <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                     </div>
-                    <div className={`w-80 sm:w-auto h-screen sm:h-fit flex flex-col sm:flex-row gap-10 pt-16 sm:py-2 px-8 md:justify-between absolute top-20 sm:static bg-white z-[5] sm:z-auto transition-all duration-500 ease-in ${open ? '-right-4' : '-right-[100%]'}`}>
+                    <div className={`w-80 sm:w-auto h-screen sm:h-fit flex flex-col sm:flex-row gap-10 pt-16 sm:py-2 px-8 md:justify-between absolute top-20 sm:static bg-white z-[5] sm:z-auto transition-all duration-500 ease-in ${open ? '-right-4' : '-right-[110%]'}`}>
                         <li onClick={() => setOpen(!open)} className="px-2 hover:text-accentGreen">MENU</li>
                         <li className="px-2 hover:text-accentGreen">REWARDS</li>
                         <li onClick={() => setOpen(!open)} className="px-2 hover:text-accentGreen">GIFT CARDS</li>
