@@ -49,13 +49,14 @@ const Navbar = (props) => {
                         <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                     </div>
                     <div className={`flex flex-col gap-16 pt-16 sm:py-2 px-8 md:justify-between sm:flex-row w-80 sm:w-auto h-screen sm:h-fit absolute top-20 sm:static bg-white sm:z-auto z-[5] transition-all duration-500 ease-in ${open ? '-right-4' : '-right-[100%]'}`}>
-                        <li className="px-2 hover:text-accentGreen">MENU</li>
+                        <li onClick={() => setOpen(!open)} className="px-2 hover:text-accentGreen">MENU</li>
                         <li className="px-2 hover:text-accentGreen">REWARDS</li>
-                        <li className="px-2 hover:text-accentGreen">GIFT CARDS</li>
-                        <div className="sm:hidden border my-2"></div>
+                        <li onClick={() => setOpen(!open)} className="px-2 hover:text-accentGreen">GIFT CARDS</li>
+                        <div onClick={() => setOpen(!open)} className="sm:hidden border my-2"></div>
                         <div className='flex justify-start flex-wrap gap-2 sm:hidden'>
                             <li className="px-2">
                                 <button
+                                    onClick={() => setOpen(!open)}
                                     className="border-solid border-black border-2 rounded-full px-5 py-1 text-center font-bold hover:bg-black/[.06]"
                                 >
                                     Sign in
@@ -63,6 +64,7 @@ const Navbar = (props) => {
                             </li>
                             <li className="px-2">
                                 <button
+                                    onClick={() => setOpen(!open)}
                                     className="border-solid border-black border-2 rounded-full px-5 py-1 text-center font-bold text-white bg-black hover:bg-black/[.5]"
                                 >
                                     Join now

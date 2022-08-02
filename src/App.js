@@ -10,7 +10,7 @@ import {
 function App() {
   const [open, setOpen] = useState(false);
   return (
-    <div classNameName={`App ${open ? 'border border-black overflow-y-hidden h-screen' : null}`}>
+    <div classNameName={`overflow-x-hidden border border-black ${open ? ' overflow-y-hidden h-screen' : null}`}>
       <div className='flex items-center h-24' style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px" }}>
         <div className="w-full xl:mx-10">
           <Navbar open={open} setOpen={setOpen} />
