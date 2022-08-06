@@ -23,7 +23,7 @@ function App() {
   });
 
   return (
-    <div className={`overflow-x-hidden ${open ? 'h-screen overflow-y-hidden' : null}`}>
+    <div className={`App overflow-x-hidden ${open ? 'h-screen overflow-y-hidden' : null}`}>
       <div className='flex items-center sm:h-24' style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px" }}>
         <div className="w-full xl:mx-10">
           <Navbar open={open} setOpen={setOpen} isMobile={isMobile} />
